@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Articole</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(to bottom right, #0f172a, #1e3a8a);
+            min-height:100vh;
+            color:white;
+            overflow:hidden;
+        }
+
+        /* MENIU */
+
+        header{
+            width:100%;
+            padding:20px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.15);
+        }
+
+        .menu-left,
+        .menu-right{
+            display:flex;
+            gap:15px;
+            align-items:center;
+        }
+
+        .menu-btn{
+            text-decoration:none;
+            color:white;
+            padding:12px 18px;
+            border-radius:12px;
+            background: rgba(255,255,255,0.12);
+            transition:0.3s;
+            font-weight:bold;
+        }
+
+        .menu-btn:hover{
+            background:#38bdf8;
+            transform:scale(1.05);
+        }
+
+        /* TITLU */
+
+        .title{
+            text-align:center;
+            margin-top:50px;
+        }
+
+        .title h1{
+            font-size:52px;
+            text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        /* CONTAINER */
+
+        .buttons-container{
+            position:relative;
+            width:100%;
+            height:75vh;
+        }
+
+        /* BUTOANE */
+
+        .circle-btn{
+            position:absolute;
+
+            width:170px;
+            height:170px;
+
+            border-radius:50%;
+            text-decoration:none;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+
+            color:white;
+            font-size:18px;
+            font-weight:bold;
+
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+
+            transition:0.4s;
+        }
+
+        .circle-btn:hover{
+            transform:scale(1.1);
+            background:#38bdf8;
+        }
+
+        /* POZITIONARE X */
+
+        .btn1{
+            top:70px;
+            left:22%;
+        }
+
+        .btn2{
+            top:70px;
+            right:22%;
+        }
+
+        .btn3{
+            top:200px;
+            left:45%;
+        }
+
+        .btn4{
+            bottom:60px;
+            left:22%;
+        }
+
+        .btn5{
+            bottom:60px;
+            right:22%;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:950px){
+
+            body{
+                overflow:auto;
+            }
+
+            header{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            .menu-right{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .title h1{
+                font-size:38px;
+            }
+
+            .buttons-container{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                gap:30px;
+                height:auto;
+                margin-top:40px;
+                padding-bottom:50px;
+            }
+
+            .circle-btn{
+                position:static;
+                width:150px;
+                height:150px;
+            }
+
+            .top-image{
+                position:static;
+                width:85%;
+                height:220px;
+                display:block;
+                margin:30px auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENIU -->
+
+    <header>
+
+        <div class="menu-left">
+            <a href="index.html" class="menu-btn">Acasă</a>
+        </div>
+
+        <div class="menu-right">
+            <a href="informatii.html" class="menu-btn">Informații</a>
+            <a href="declaratii.html" class="menu-btn">Declarații</a>
+            <a href="galerie.html" class="menu-btn">Galerie</a>
+            <a href="concluzii.html" class="menu-btn">Concluzii</a>
+            <a href="quiz.html" class="menu-btn">Quiz</a>
+        </div>
+
+    </header>
+
+    <!-- TITLU -->
+
+    <div class="title">
+        <h1>Articole</h1>
+    </div>
+
+    <!-- BUTOANE -->
+
+    <div class="buttons-container">
+
+        <a href="https://www.europarl.europa.eu/pdfs/news/expert/2020/10/story/20200918STO87404/20200918STO87404_ro.pdf" class="circle-btn btn1">
+            ARTICOL 1
+        </a>
+
+        <a href="https://www.europarl.europa.eu/topics/ro/article/20200918STO87404/inteligenta-artificiala-oportunitati-si-pericole" class="circle-btn btn2">
+            ARTICOL 2
+        </a>
+
+        <a href="https://www.intelligenceinfo.org/rolul-ai-in-transformarea-jocului-electoral-deepfake-si-fake-news-ca-factori-cheie/" class="circle-btn btn3">
+            ARTICOL 3
+        </a>
+
+        <a href="https://www.roaep.ro/prezentare/comunicat-de-presa/comunicat-de-presa-privind-functionarea-optima-a-sistemelor-si-aplicatiilor-informatice-utilizate-la-turul-al-doilea-al-alegerilor-prezidentiale-din-anul-2025/" class="circle-btn btn4">
+            ARTICOL 4
+        </a>
+
+        <a href="https://www.wolterskluwer.com/ro-ro/expert-insights/rolul-ia-in-spatiul-democratic" class="circle-btn btn5">
+            ARTICOL 5
+        </a>
+
+    </div>
+
+</body>
+</html>

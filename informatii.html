@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Informații Generale</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(to bottom right, #0f172a, #1e3a8a);
+            min-height:100vh;
+            color:white;
+            overflow:hidden;
+        }
+
+        /* MENIU */
+
+        header{
+            width:100%;
+            padding:20px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.15);
+        }
+
+        .menu-left,
+        .menu-right{
+            display:flex;
+            gap:15px;
+            align-items:center;
+        }
+
+        .menu-btn{
+            text-decoration:none;
+            color:white;
+            padding:12px 18px;
+            border-radius:12px;
+            background: rgba(255,255,255,0.12);
+            transition:0.3s;
+            font-weight:bold;
+        }
+
+        .menu-btn:hover{
+            background:#38bdf8;
+            transform:scale(1.05);
+        }
+
+        /* TITLU */
+
+        .title{
+            text-align:center;
+            margin-top:60px;
+        }
+
+        .title h1{
+            font-size:50px;
+            text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        /* IMAGINE DREAPTA SUS */
+
+        .top-image{
+            position:absolute;
+            top:120px;
+            right:60px;
+
+            width:320px;
+            height:220px;
+
+            object-fit:cover;
+
+            border:4px solid rgba(255,255,255,0.25);
+
+            clip-path: polygon(
+                12% 0%,
+                88% 0%,
+                100% 12%,
+                100% 88%,
+                88% 100%,
+                12% 100%,
+                0% 88%,
+                0% 12%
+            );
+
+            box-shadow:0 0 25px rgba(0,0,0,0.5);
+
+            transition:0.4s;
+        }
+
+        .top-image:hover{
+            transform:scale(1.05);
+        }
+
+        /* BUTOANE DIAGONALE */
+
+        .buttons-container{
+            position:relative;
+            width:100%;
+            height:70vh;
+        }
+
+        .circle-btn{
+            position:absolute;
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            border:none;
+            cursor:pointer;
+            font-size:20px;
+            font-weight:bold;
+            color:white;
+            text-decoration:none;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+
+            transition:0.4s;
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .circle-btn:hover{
+            transform:scale(1.1);
+            background:#38bdf8;
+        }
+
+        /* POZITIONARE DIAGONALA */
+
+        .btn1{
+            top:80px;
+            left:20%;
+        }
+
+        .btn2{
+            top:220px;
+            left:42%;
+        }
+
+        .btn3{
+            top:360px;
+            left:64%;
+        }
+
+        @media(max-width:900px){
+
+            body{
+                overflow:auto;
+            }
+
+            header{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            .menu-right{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .title h1{
+                font-size:36px;
+            }
+
+            .buttons-container{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                gap:30px;
+                height:auto;
+                margin-top:50px;
+            }
+
+            .circle-btn{
+                position:static;
+                width:150px;
+                height:150px;
+            }
+
+            .top-image{
+                position:static;
+                width:85%;
+                height:220px;
+                display:block;
+                margin:30px auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENIU -->
+
+    <header>
+
+        <div class="menu-left">
+            <a href="index.html" class="menu-btn">Acasă</a>
+        </div>
+
+        <div class="menu-right">
+            <a href="articole.html" class="menu-btn">Articole</a>
+            <a href="declaratii.html" class="menu-btn">Declarații</a>
+            <a href="galerie.html" class="menu-btn">Galerie</a>
+            <a href="concluzii.html" class="menu-btn">Concluzii</a>
+            <a href="quiz.html" class="menu-btn">Quiz</a>
+        </div>
+
+    </header>
+
+    <!-- TITLU -->
+
+    <div class="title">
+        <h1>Informații Generale</h1>
+    </div>
+
+    <!-- IMAGINE -->
+
+    <img src="poza1.jpg" alt="Imagine" class="top-image">
+
+    <!-- BUTOANE -->
+
+    <div class="buttons-container">
+
+        <a href="https://prezi.com/p/i7kk8vbmpse3/?present=1" class="circle-btn btn1">
+            IA. ȘI DEMOCRAȚIA
+        </a>
+
+        <a href="https://prezi.com/p/4aeuhhb_wy7_/?present=1" class="circle-btn btn2">
+            IMPACTUL IA.
+        </a>
+
+        <a href="https://prezi.com/p/ctv_8sy-629j/?present=1" class="circle-btn btn3">
+            IA. ȘI OMENIREA
+        </a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galerie</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom right, #0f172a, #1e3a8a);
+    overflow:hidden;
+    height:100vh;
+    color:white;
+}
+
+/* MENIU */
+
+header{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.menu-left,
+.menu-right{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.menu-btn{
+    text-decoration:none;
+    color:white;
+    padding:12px 18px;
+    border-radius:12px;
+    background: rgba(255,255,255,0.12);
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.menu-btn:hover{
+    background:#38bdf8;
+}
+
+/* TITLU */
+
+.title{
+    text-align:center;
+    margin-top:20px;
+    font-size:55px;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* SCENA */
+
+.scene{
+
+    position:absolute;
+
+    top:80%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:100%;
+    height:70vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    perspective:1800px;
+}
+
+/* SFERA */
+
+.sphere{
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    transform-style:preserve-3d;
+
+    animation:rotateSphere 90s linear infinite;
+}
+
+@keyframes rotateSphere{
+
+    from{
+        transform:rotateY(0deg);
+    }
+
+    to{
+        transform:rotateY(360deg);
+    }
+}
+
+/* POZE */
+
+.sphere img{
+
+    position:absolute;
+
+    width:210px;
+    height:210px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    border:3px solid rgba(255,255,255,0.25);
+
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* POZITIONARE */
+
+.img1  { transform: rotateY(0deg) translateZ(500px); }
+
+.img2  { transform: rotateY(24deg) translateZ(500px); }
+
+.img3  { transform: rotateY(48deg) translateZ(500px); }
+
+.img4  { transform: rotateY(72deg) translateZ(500px); }
+
+.img5  { transform: rotateY(96deg) translateZ(500px); }
+
+.img6  { transform: rotateY(120deg) translateZ(500px); }
+
+.img7  { transform: rotateY(144deg) translateZ(500px); }
+
+.img8  { transform: rotateY(168deg) translateZ(500px); }
+
+.img9  { transform: rotateY(192deg) translateZ(500px); }
+
+.img10 { transform: rotateY(216deg) translateZ(500px); }
+
+.img11 { transform: rotateY(240deg) translateZ(500px); }
+
+.img12 { transform: rotateY(264deg) translateZ(500px); }
+
+.img13 { transform: rotateY(288deg) translateZ(500px); }
+
+.img14 { transform: rotateY(312deg) translateZ(500px); }
+
+.img15 { transform: rotateY(336deg) translateZ(500px); }
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    body{
+        overflow:auto;
+    }
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .menu-right{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .title{
+        font-size:38px;
+    }
+
+    .scene{
+        top:45%;
+    }
+
+    .sphere{
+        width:260px;
+        height:260px;
+    }
+
+    .sphere img{
+        width:120px;
+        height:120px;
+    }
+
+    .img1  { transform: rotateY(0deg) translateZ(260px); }
+
+    .img2  { transform: rotateY(24deg) translateZ(260px); }
+
+    .img3  { transform: rotateY(48deg) translateZ(260px); }
+
+    .img4  { transform: rotateY(72deg) translateZ(260px); }
+
+    .img5  { transform: rotateY(96deg) translateZ(260px); }
+
+    .img6  { transform: rotateY(120deg) translateZ(260px); }
+
+    .img7  { transform: rotateY(144deg) translateZ(260px); }
+
+    .img8  { transform: rotateY(168deg) translateZ(260px); }
+
+    .img9  { transform: rotateY(192deg) translateZ(260px); }
+
+    .img10 { transform: rotateY(216deg) translateZ(260px); }
+
+    .img11 { transform: rotateY(240deg) translateZ(260px); }
+
+    .img12 { transform: rotateY(264deg) translateZ(260px); }
+
+    .img13 { transform: rotateY(288deg) translateZ(260px); }
+
+    .img14 { transform: rotateY(312deg) translateZ(260px); }
+
+    .img15 { transform: rotateY(336deg) translateZ(260px); }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="menu-left">
+        <a href="index.html" class="menu-btn">Acasă</a>
+    </div>
+
+    <div class="menu-right">
+        <a href="informatii.html" class="menu-btn">Informații</a>
+        <a href="articole.html" class="menu-btn">Articole</a>
+        <a href="declaratii.html" class="menu-btn">Declarații</a>
+        <a href="concluzii.html" class="menu-btn">Concluzii</a>
+        <a href="quiz.html" class="menu-btn">Quiz</a>
+    </div>
+
+</header>
+
+<h1 class="title">Galerie</h1>
+
+<div class="scene">
+
+    <div class="sphere">
+
+        <img src="poza10.jpg" class="img1">
+        <img src="poza20.jpg" class="img2">
+        <img src="poza30.jpg" class="img3">
+        <img src="poza40.jpg" class="img4">
+        <img src="poza50.jpg" class="img5">
+        <img src="poza60.jpg" class="img6">
+        <img src="poza70.jpg" class="img7">
+        <img src="poza8.jpg" class="img8">
+        <img src="poza9.jpg" class="img9">
+        <img src="poza80.jpg" class="img10">
+        <img src="poza90.jpg" class="img11">
+        <img src="poza12.jpg" class="img12">
+        <img src="poza13.jpg" class="img13">
+        <img src="poza14.jpg" class="img14">
+        <img src="poza15.jpg" class="img15">
+
+    </div>
+
+</div>
+
+</body>
+</html>

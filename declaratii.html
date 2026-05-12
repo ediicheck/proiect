@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Declarații</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(to bottom right, #0f172a, #1e3a8a);
+            color:white;
+            min-height:100vh;
+            padding-bottom:80px;
+        }
+
+        /* MENIU */
+
+        header{
+            width:100%;
+            padding:20px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-bottom:1px solid rgba(255,255,255,0.15);
+        }
+
+        .menu-left,
+        .menu-right{
+            display:flex;
+            gap:15px;
+            align-items:center;
+        }
+
+        .menu-btn{
+            text-decoration:none;
+            color:white;
+            padding:12px 18px;
+            border-radius:12px;
+            background: rgba(255,255,255,0.12);
+            transition:0.3s;
+            font-weight:bold;
+        }
+
+        .menu-btn:hover{
+            background:#38bdf8;
+            transform:scale(1.05);
+        }
+
+        /* SECTIUNI */
+
+        .section{
+            width:90%;
+            margin:70px auto;
+        }
+
+        .section-title{
+            text-align:center;
+            font-size:45px;
+            margin-bottom:45px;
+            text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        /* DOUA POZE */
+
+        .cards{
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            width:420px;
+
+            background: rgba(255,255,255,0.08);
+            border-radius:25px;
+
+            padding:20px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card img{
+            width:100%;
+            height:260px;
+            object-fit:cover;
+            border-radius:20px;
+            margin-bottom:20px;
+        }
+
+        .card p{
+            text-align:center;
+            font-size:18px;
+            line-height:1.6;
+            color:#e2e8f0;
+        }
+
+        /* ULTIMA SECTIUNE */
+
+        .big-section{
+            width:90%;
+            margin:90px auto 0 auto;
+        }
+
+        .big-title{
+            text-align:center;
+            font-size:50px;
+            margin-bottom:45px;
+            text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .big-card{
+            background: rgba(255,255,255,0.08);
+            border-radius:30px;
+
+            padding:30px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:0 0 25px rgba(0,0,0,0.4);
+        }
+
+        .big-card img{
+            width:100%;
+            height:550px;
+            object-fit:cover;
+            border-radius:25px;
+            margin-bottom:30px;
+        }
+
+        .big-card p{
+            text-align:center;
+            font-size:28px;
+            line-height:1.8;
+            color:#f8fafc;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px){
+
+            header{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            .menu-right{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .section-title,
+            .big-title{
+                font-size:35px;
+            }
+
+            .card{
+                width:100%;
+            }
+
+            .big-card img{
+                height:320px;
+            }
+
+            .big-card p{
+                font-size:21px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENIU -->
+
+    <header>
+
+        <div class="menu-left">
+            <a href="index.html" class="menu-btn">Acasă</a>
+        </div>
+
+        <div class="menu-right">
+            <a href="informatii.html" class="menu-btn">Informații</a>
+            <a href="articole.html" class="menu-btn">Articole</a>
+            <a href="galerie.html" class="menu-btn">Galerie</a>
+            <a href="concluzii.html" class="menu-btn">Concluzii</a>
+            <a href="quiz.html" class="menu-btn">Quiz</a>
+        </div>
+
+    </header>
+
+    <!-- 1 -->
+
+    <div class="section">
+
+        <h1 class="section-title">Avertismente despre Manipulare și Adevăr</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="musca.jpg" alt="Poza 1">
+
+                <p>
+                    „Inteligența artificială nu trebuie să fie neapărat rea pentru a distruge omenirea. Dacă AI are un scop și omenirea stă în calea acelui scop, ea va mătura omenirea ca pe ceva firesc, fără măcar să se gândească la asta, fără resentimente.” (Aplicat la democrație, acest lucru se traduce prin optimizarea algoritmilor de vot fără a ține cont de etică).ELON MUSK
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="Tristan Harris.jpg" alt="Poza 2">
+
+                <p>
+                    „Dacă nu cădem de acord asupra a ceea ce este adevărat, nu putem avea o democrație. AI are capacitatea de a inunda spațiul public cu atât de multe falsuri încât conceptul de adevăr comun dispare.”TRISTAN HARRIS
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 2 -->
+
+    <div class="section">
+
+        <h1 class="section-title">AI ca Instrument de Supraveghere sau Control</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="Edward Snowden.jpg" alt="Poza 3">
+
+                <p>
+                    „Cea mai mare teamă nu este că AI va deveni conștientă, ci că va deveni instrumentul perfect pentru o tiranie automatizată, unde deciziile politice sunt luate de algoritmi opaci, nu de oameni.”EDWARD SNOWDEN
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="Brad Smith.jpg" alt="Poza 4">
+
+                <p>
+                    „Trebuie să ne întrebăm ce vor face democrațiile atunci când mașinile vor putea convinge oamenii mai bine decât pot face politicienii. Trebuie să punem frâne etice înainte ca tehnologia să depășească capacitatea noastră de control.”BRAD SMITH
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 3 -->
+
+    <div class="section">
+
+        <h1 class="section-title">Perspective Optimiste (AI ca Partener)</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="Audrey Azoulay.jpg" alt="Poza 5">
+
+                <p>
+                    „AI poate fi un instrument puternic pentru democrație dacă este folosit pentru a crește transparența guvernamentală și pentru a facilita participarea cetățenilor, dar numai dacă este guvernat de standarde etice universale.”AUDREY AZOULAY
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="Sundar Pichai.jpg" alt="Poza 6">
+
+                <p>
+                    „AI este probabil cel mai important lucru la care a lucrat vreodată omenirea. Este mai profund decât electricitatea sau focul, dar trebuie să ne asigurăm că servește valorile umane, inclusiv libertatea.”SUNDAR PICHAI
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 4 -->
+
+    <div class="big-section">
+
+        <h1 class="big-title"> Influența inteligenței artificiale asupra proceselor electorale</h1>
+
+        <div class="big-card">
+
+            <img src="Claudia.jpg" alt="Poza mare">
+
+            <p>
+                "Dezinformarea a fost folosită pentru a discredita instituțiile democratice, a semăna neîncrederea în societate și a ataca oponenții politici. Rețelele de socializare au fost folosite de grupuri extremiste pentru a trimite mesaje de ură și a incita la violență. Rețelele de socializare sunt, de asemenea, un instrument important al mișcărilor online."CLAUDIA GILIA
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
